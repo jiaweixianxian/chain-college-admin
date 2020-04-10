@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import DefaultLayout from './layouts/Default.vue'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
 
 Vue.use(Router)
 
@@ -11,17 +9,21 @@ export default new Router({
     {
       path: '/',
       component: DefaultLayout,
+      redirect:'college',
       children: [
         {
-          path: '',
-          name: 'home',
-          component: Home
+          path: 'college',
+          name: 'college',
+          component: () => import('@/views/college/List')
         },
         {
-          path: '/about',
-          name: 'about',
-          component: About
-        }
+          path: 'college/:id',
+          component: () => import('./views/college/Detail.vue'),
+        },
+        {
+          path: 'college/edit/:id',
+          component: () => import('./views/college/Edit.vue'),
+        },
       ]
     }
   ]

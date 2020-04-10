@@ -6,8 +6,8 @@
           class="q-mr-sm" />
 
         <q-toolbar-title v-if="$q.screen.gt.xs" shrink class="row items-center no-wrap">
-          <img src="https://cdn.quasar.dev/img/layout-gallery/logo-google.svg">
-          <span class="q-ml-sm">News</span>
+          <img src="../assets/logo.png" style="width:40px;height:40px">
+          <span class="q-ml-sm">大学之道</span>
         </q-toolbar-title>
 
         <q-space />
@@ -18,58 +18,7 @@
             <q-icon v-if="search === ''" name="search" />
             <q-icon v-else name="clear" class="cursor-pointer" @click="search = ''" />
           </template>
-          <!-- <template v-slot:append>
-            <q-btn
-              flat
-              dense
-              round
-              aria-label="Menu"
-              icon="arrow_drop_down"
-            >
-              <q-menu anchor="bottom right" self="top right">
-                <div class="q-pa-md" style="width: 400px">
-                  <div class="text-body2 text-grey q-mb-md">
-                    Narrow your search results
-                  </div>
 
-                  <div class="row items-center">
-                    <div class="col-3 text-subtitle2 text-grey">
-                      Exact phrase
-                    </div>
-                    <div class="col-9 q-pl-md">
-                      <q-input dense v-model="exactPhrase" />
-                    </div>
-
-                    <div class="col-3 text-subtitle2 text-grey">
-                      Has words
-                    </div>
-                    <div class="col-9 q-pl-md">
-                      <q-input dense v-model="hasWords" />
-                    </div>
-
-                    <div class="col-3 text-subtitle2 text-grey">
-                      Exclude words
-                    </div>
-                    <div class="col-9 q-pl-md">
-                      <q-input dense v-model="excludeWords" />
-                    </div>
-
-                    <div class="col-3 text-subtitle2 text-grey">
-                      Website
-                    </div>
-                    <div class="col-9 q-pl-md">
-                      <q-input dense v-model="byWebsite" />
-                    </div>
-
-                    <div class="col-12 q-pt-lg row justify-end">
-                      <q-btn flat dense no-caps color="grey-7" size="md" style="min-width: 68px;" label="Search" v-close-popup />
-                      <q-btn flat dense no-caps color="grey-7" size="md" style="min-width: 68px;" @click="onClear" label="Clear" v-close-popup />
-                    </div>
-                  </div>
-                </div>
-              </q-menu>
-            </q-btn>
-          </template> -->
         </q-input>
 
         <q-space />
@@ -86,7 +35,7 @@
           </q-btn>
           <q-btn round flat>
             <q-avatar size="26px">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="http://pic1.zhimg.com/50/v2-ede9473ddcbd84fe7c1e363953ed7410_hd.jpg">
             </q-avatar>
             <q-tooltip>Account</q-tooltip>
           </q-btn>
@@ -163,10 +112,10 @@ export default {
       byWebsite: '',
       byDate: 'Any time',
       links1: [
-        { icon: 'web', text: 'Top stories' },
-        { icon: 'person', text: 'For you' },
-        { icon: 'star_border', text: 'Favourites' },
-        { icon: 'search', text: 'Saved searches' }
+        { icon: 'web', text: '大学管理' },
+        { icon: 'person', text: '高考分数线' },
+        { icon: 'star_border', text: '考研分数线' },
+        { icon: 'search', text: '用户管理' }
       ],
       links2: [
         { icon: 'flag', text: 'Canada' },
