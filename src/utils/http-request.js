@@ -20,23 +20,11 @@ service.interceptors.request.use(
 service.interceptors.response.use(
     response => {
         if (response.status !== 200) {
-            switch (response.status) {
-                default:
-                    break;
-            }
-
-            Notify.create(`${response.statusText}`)
+            return response.data;
 
         } else if (response.status === 200) {
-            if (response.data.status === 'error') {
-                Notify.create(`${response.data.body.error_message ? response.data.body.error_message : response.data.body}`);
-                return;
-            }
-            if (response.data.body) {
-                return response.data.body;
-            } else {
-                return response.data;
-            }
+
+            return response.data;
         }
     },
     error => {

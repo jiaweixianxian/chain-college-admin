@@ -5,7 +5,8 @@
         <q-btn flat dense round @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu" icon="menu"
           class="q-mr-sm" />
 
-        <q-toolbar-title v-if="$q.screen.gt.xs" shrink class="row items-center no-wrap">
+        <q-toolbar-title v-if="$q.screen.gt.xs" shrink class="row items-center no-wrap"
+        >
           <img src="../assets/logo.png" style="width:40px;height:40px">
           <span class="q-ml-sm">大学之道</span>
         </q-toolbar-title>
@@ -46,11 +47,14 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered content-class="bg-white" :width="280">
       <q-scroll-area class="fit">
         <q-list padding class="text-grey-8">
-          <q-item class="GNL__drawer-item" v-ripple v-for="link in links1" :key="link.text" clickable>
+          <q-item
+        :to="link.route"
+           class="GNL__drawer-item" v-ripple v-for="link in links1" :key="link.text" clickable>
             <q-item-section avatar>
               <q-icon :name="link.icon" />
             </q-item-section>
-            <q-item-section>
+            <q-item-section
+            >
               <q-item-label>{{ link.text }}</q-item-label>
             </q-item-section>
           </q-item>
@@ -112,7 +116,7 @@ export default {
       byWebsite: '',
       byDate: 'Any time',
       links1: [
-        { icon: 'web', text: '大学管理' },
+        { icon: 'web', text: '大学管理',route:'/college' },
         { icon: 'person', text: '高考分数线' },
         { icon: 'star_border', text: '考研分数线' },
         { icon: 'search', text: '用户管理' }
