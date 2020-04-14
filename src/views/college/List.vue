@@ -102,7 +102,7 @@ export default {
           sortable: true
         },
         { name: 'type', label: '类型', field: 'type', align: 'left',},
-        { name: 'tags', label: '标签', field: 'tags' , align: 'left',},
+        // { name: 'tags', label: '标签', field: 'tags' , align: 'left',},
         { name: 'department', label: '主管部门', field: 'department', align: 'left', },
         { name: 'location', label: '所在地', field: 'location', align: 'left',},
         {name:'motto',label:'校训',field:'motto', align: 'left',},
@@ -180,6 +180,7 @@ export default {
     },
    async getProvince(){
     this.provinceList=await collegeAPI.getProvinceList();
+    this.province=this.currentProvince;
     },
     confirmProvince(){
         this.currentProvince=this.province;

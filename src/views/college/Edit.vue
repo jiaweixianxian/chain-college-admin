@@ -4,10 +4,10 @@
     <q-form ref="myForm">
       <div v-for="(item, index) in columns" :key="index">
 
-        <q-select v-if="item.name==='type'" v-model="collegeDetail.type" :options="typeOptions" multiple
-          :label="item.label" />
+        <!-- <q-select v-if="item.name==='type'" v-model="collegeDetail.type" :options="typeOptions" multiple
+          :label="item.label" /> -->
 
-        <q-select v-else-if="item.name==='tags'" v-model="collegeDetail.tags" :options="options" multiple
+        <q-select v-if="item.name==='tags'" v-model="collegeDetail.tags" :options="options" multiple
           :label="item.label" />
 
         <q-select v-else-if="item.name==='schoolfellow'" v-model="collegeDetail.schoolfellow" use-input use-chips

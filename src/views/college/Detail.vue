@@ -21,8 +21,8 @@
           </div>
           <div class="col text-weight-regular">
 
-            <template v-if="item.field==='schoolfellow'">
-              <q-badge v-for="(fellow, index) in collegeDetail.schoolfellow" :key="index" outline
+            <template v-if="item.field==='schoolFellow'">
+              <q-badge v-for="(fellow, index) in collegeDetail.schoolFellow" :key="index" outline
                 color="primary q-mr-md" :label="fellow" />
             </template>
 
@@ -52,12 +52,12 @@ export default {
             loading:false,
             columns: [
         { name: 'type', label: '类别', field: 'type' },
-        { name: 'created_year', label: '创立时间', field: 'created_year'},
+        { name: 'createdYear', label: '创立时间', field: 'createdYear'},
         { name: 'department', label: '主管部门', field: 'department' },
         { name: 'website', label: '学校官网', field: 'website'},
         { name: 'code', label: '学校代码', field: 'code' },
         {name:'motto',label:'校训',field:'motto'},
-        {name:'schoolfellow',label:'知名校友',field:'schoolfellow'},
+        {name:'schoolFellow',label:'知名校友',field:'schoolFellow'},
         {name:'create_ts',label:'创建条目时间',field:'create_ts'},
         {name:'update_ts',label:'更新条目时间',field:'update_ts'},
 
